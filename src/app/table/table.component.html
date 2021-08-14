@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Autó név</th>
+    <th>Kibérelt</th>
+  </tr>
+  <tr *ngFor="let elem of autok">
+    <td [title]="'Évjárat: '+elem.evjarat">{{elem.nev}}</td>
+    <td>
+      <span *ngIf="elem.kiberelt">foglalt: {{foglalo}}</span>
+      <span *ngIf="!elem.kiberelt">szabad</span>
+    </td>
+    <td>
+      <button (click)="foglalas.emit(elem)">Foglalás</button>
+    </td>
+  </tr>
+</table>

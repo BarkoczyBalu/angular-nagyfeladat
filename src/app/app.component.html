@@ -1,0 +1,4 @@
+<app-table [autok]="autok" [foglalo]="foglalo" (foglalas)="onFoglalas($event)"></app-table>
+
+<p>Foglalt autó: {{foglaltAuto?.nev}}</p>
+<p>Foglaló:</p><input [(ngModel)]="foglalo">
